@@ -1,0 +1,90 @@
+.model-addarticle {
+  position: relative;
+  right: -84px;
+  top: 12px;
+}
+.model-addarticle button {
+  float: right;
+}
+.model-addarticle button:nth-child(2) {
+  margin-right: 12px;
+}
+
+.content-sleep-box {
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  bottom: 20px;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+.content-sleep-box .content-sleep-detail {
+  position: relative;
+  padding: 16px;
+  height: 100%;
+  overflow-y: auto;
+  background: #fff;
+}
+.content-sleep-box .content-sleep-detail .content-sleep-record {
+  position: relative;
+  margin-bottom: 12px;
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content-sleep-box .content-sleep-detail .content-sleep-record[status=awake]:hover {
+  background: rgb(202, 202, 202);
+}
+.content-sleep-box .content-sleep-detail .content-sleep-record[status=awake]:active {
+  background: rgb(163, 162, 162);
+}
+.content-sleep-box .content-sleep-detail .content-sleep-record .content-sleep-shadow {
+  position: absolute;
+  bottom: 0;
+  width: 80px;
+  height: 0px;
+  background: rgba(70, 70, 70, 0.8);
+}
+.content-sleep-box .content-sleep-detail .content-sleep-record[status=asleep] {
+  background: rgb(70, 70, 70);
+}
+
+.todo-box .todo-title {
+  display: inline-block;
+  width: 80%;
+}
+.todo-box .todo-addicon {
+  width: 20px;
+  margin-left: 60px;
+}
+.todo-box .todo-row {
+  margin: 0 !important;
+  margin-bottom: 8px !important;
+}
+.todo-box .todo-row .todo-task {
+  float: left;
+  width: 80%;
+}
+.todo-box .todo-row .todo-task .todo-ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  min-height: 1px;
+}
+.todo-box .todo-row .todo-task .todo-ul .todo-done {
+  text-decoration: line-through;
+}
+.todo-box .todo-row .todo-progress {
+  float: left;
+  width: 20%;
+}
+.todo-box .todo-row .todo-input-ordinary,
+.todo-box .todo-row .todo-input-new {
+  width: 260px;
+}/*# sourceMappingURL=partial.css.map */

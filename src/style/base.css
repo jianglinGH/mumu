@@ -1,0 +1,306 @@
+@font-face {
+  font-family: "logoFont";
+  src: url(../../public/font/Streetwear.otf);
+}
+.cursor-pointer:hover {
+  cursor: pointer;
+}
+
+.border-none {
+  border: none !important;
+}
+.border-none:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.root {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+.root .theme-img {
+  position: absolute;
+  width: 30px;
+  right: 0;
+  top: 16px;
+  right: 4px;
+}
+.root .theme-img:hover {
+  cursor: pointer;
+}
+.root .main-page {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+.root .main-page > .main-page-layout {
+  height: 100%;
+}
+.root .main-page > .main-page-layout > .main-page-header {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  overflow: hidden;
+}
+.root .main-page > .main-page-layout > .main-page-header[theme=light] {
+  background: #98DBC6;
+}
+.root .main-page > .main-page-layout > .main-page-header[theme=dark] {
+  background: #37554b;
+}
+.root .main-page > .main-page-layout > .main-page-header .header-span {
+  margin-left: 4px;
+  margin-right: 4px;
+  color: #fff;
+}
+.root .main-page > .main-page-layout > .main-page-header .page-header-search {
+  margin-right: 12px;
+}
+.root .main-page > .main-page-layout > .main-page-header .header-logo {
+  position: absolute;
+  left: 20px;
+  font-size: 24px;
+  font-family: "logoFont", "Arial";
+  color: #fff;
+}
+.root .main-page > .main-page-layout > .main-page-header .ant-space-item {
+  color: #fff;
+}
+.root .main-page > .main-page-layout > .main-page-header .img-write-article {
+  margin-left: 16px;
+  width: 24px;
+}
+.root .main-page > .main-page-layout > .main-page-header .img-write-article:hover {
+  cursor: pointer;
+}
+.root .main-page > .main-page-layout .sider-tree {
+  margin-top: 8px;
+  width: 100%;
+  background: none;
+  color: #fff;
+}
+.root .main-page > .main-page-layout .sider-tree .sider-icon {
+  position: relative;
+  top: -2px;
+  margin-right: 20px;
+  width: 20px;
+}
+.root .main-page > .main-page-layout .sider-tree .sider-icon.sider-icon-child:hover {
+  -webkit-animation: 10s rotateSelf infinite linear;
+          animation: 10s rotateSelf infinite linear;
+}
+@-webkit-keyframes rotateSelf {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes rotateSelf {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+.root .main-page .login-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 50%;
+  top: 50%;
+  position: relative;
+  transform: translate(-250px, -150px);
+  width: 500px;
+  height: 300px;
+  border: 1px solid rgb(136, 223, 175);
+  background-color: #fff;
+}
+.root .main-page .login-form-container .login-btn-ok {
+  margin-left: 60px;
+}
+.root .main-page .login-form-container .login-btn-cancel {
+  margin-left: 20px;
+}
+.root .main-page .page-content {
+  position: relative;
+  height: 100%;
+}
+.root .main-page .page-content .content-article-box {
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  bottom: 20px;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+.root .main-page .page-content .content-article-box .content-article {
+  flex-shrink: 0;
+  padding: 16px;
+  border-bottom: 1px solid rgb(207, 207, 207);
+  height: 200px;
+  background: #fff;
+}
+.root .main-page .page-content .content-article-box .content-article:last-child {
+  border: none;
+}
+.root .main-page .page-content .content-article-box .content-article .content-article-title {
+  line-height: 40px;
+  font-size: 24px;
+}
+.root .main-page .page-content .content-article-box .content-article .content-article-txt {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  WHITE-SPACE: pre;
+  text-overflow: ellipsis;
+  line-height: 30px;
+  font-size: 14px;
+  height: 92px;
+  color: rgba(0, 0, 0, 0.85);
+}
+.root .main-page .page-content .content-article-box .content-article .content-article-txt:hover {
+  cursor: pointer;
+}
+.root .main-page .page-content .content-article-box .content-article .content-article-like {
+  line-height: 40px;
+  height: 40px;
+}
+.root .main-page .page-content .content-article-box .content-article .content-article-like-icon {
+  display: inline-block;
+  font-size: 20px;
+  color: #e00;
+  cursor: default;
+  transform-origin: center;
+}
+.root .main-page .page-content .content-article-box .content-article .content-article-like-icon:hover {
+  -webkit-animation: beat 0.25s infinite alternate;
+          animation: beat 0.25s infinite alternate;
+}
+@-webkit-keyframes beat {
+  to {
+    transform: scale(1.4);
+  }
+}
+@keyframes beat {
+  to {
+    transform: scale(1.4);
+  }
+}
+.root .main-page .page-content .content-article-box .content-article .content-article-like-count {
+  position: relative;
+  margin-left: 8px;
+  top: -2px;
+}
+.root .main-page .page-content .content-article-box .content-article-detail {
+  position: relative;
+  padding: 16px;
+  height: 100%;
+  overflow-y: auto;
+  background: #fff;
+}
+.root .main-page .page-content .content-article-box .content-article-detail .content-article-view,
+.root .main-page .page-content .content-article-box .content-article-detail .content-article-edit {
+  position: relative;
+  height: 100%;
+}
+.root .main-page .page-content .content-article-box .content-article-detail .content-article-view .content-article-op-container,
+.root .main-page .page-content .content-article-box .content-article-detail .content-article-edit .content-article-op-container {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  height: 24px;
+}
+.root .main-page .page-content .content-article-box .content-article-detail .content-article-view .content-article-op-container .img-edit-article,
+.root .main-page .page-content .content-article-box .content-article-detail .content-article-view .content-article-op-container .img-done-article,
+.root .main-page .page-content .content-article-box .content-article-detail .content-article-view .content-article-op-container .img-return-article,
+.root .main-page .page-content .content-article-box .content-article-detail .content-article-edit .content-article-op-container .img-edit-article,
+.root .main-page .page-content .content-article-box .content-article-detail .content-article-edit .content-article-op-container .img-done-article,
+.root .main-page .page-content .content-article-box .content-article-detail .content-article-edit .content-article-op-container .img-return-article {
+  float: right;
+  width: 24px;
+}
+.root .main-page .page-content .content-article-box .content-article-detail .content-article-view .content-article-op-container .img-edit-article:hover,
+.root .main-page .page-content .content-article-box .content-article-detail .content-article-view .content-article-op-container .img-done-article:hover,
+.root .main-page .page-content .content-article-box .content-article-detail .content-article-view .content-article-op-container .img-return-article:hover,
+.root .main-page .page-content .content-article-box .content-article-detail .content-article-edit .content-article-op-container .img-edit-article:hover,
+.root .main-page .page-content .content-article-box .content-article-detail .content-article-edit .content-article-op-container .img-done-article:hover,
+.root .main-page .page-content .content-article-box .content-article-detail .content-article-edit .content-article-op-container .img-return-article:hover {
+  cursor: pointer;
+}
+.root .main-page .page-content .content-article-box .content-article-detail .content-article-view .content-article-op-container .img-edit-article,
+.root .main-page .page-content .content-article-box .content-article-detail .content-article-view .content-article-op-container .img-done-article,
+.root .main-page .page-content .content-article-box .content-article-detail .content-article-edit .content-article-op-container .img-edit-article,
+.root .main-page .page-content .content-article-box .content-article-detail .content-article-edit .content-article-op-container .img-done-article {
+  margin-left: 12px;
+}
+.root .main-page .page-content .content-article-box .content-article-detail .content-article-view .content-article-op-container .img-tooltip,
+.root .main-page .page-content .content-article-box .content-article-detail .content-article-view .content-article-op-container .img-deleteArticle,
+.root .main-page .page-content .content-article-box .content-article-detail .content-article-edit .content-article-op-container .img-tooltip,
+.root .main-page .page-content .content-article-box .content-article-detail .content-article-edit .content-article-op-container .img-deleteArticle {
+  float: left;
+  width: 24px;
+}
+.root .main-page .page-content .content-article-box .content-article-detail .content-article-view .content-article-op-container .img-deleteArticle,
+.root .main-page .page-content .content-article-box .content-article-detail .content-article-edit .content-article-op-container .img-deleteArticle {
+  margin-right: 12px;
+}
+.root .main-page .page-content .content-article-box .content-article-detail .content-article-view .content-article-op-container .article-count-num,
+.root .main-page .page-content .content-article-box .content-article-detail .content-article-edit .content-article-op-container .article-count-num {
+  margin-left: 12px;
+  color: rgb(158, 158, 158);
+}
+.root .main-page .page-content .content-article-box .content-article-detail .content-article-view .content-article-edit-block,
+.root .main-page .page-content .content-article-box .content-article-detail .content-article-view .content-article-view-detail,
+.root .main-page .page-content .content-article-box .content-article-detail .content-article-edit .content-article-edit-block,
+.root .main-page .page-content .content-article-box .content-article-detail .content-article-edit .content-article-view-detail {
+  position: absolute;
+  top: 64px;
+  bottom: 48px;
+  left: 0px;
+  right: 0px;
+  overflow: auto;
+}
+.root .main-page .page-content .content-article-box .content-article-detail .content-article-view .content-article-edit-block,
+.root .main-page .page-content .content-article-box .content-article-detail .content-article-edit .content-article-edit-block {
+  border-radius: 2px;
+  border: 1px solid #d9d9d9;
+}
+.root .main-page .page-content .content-article-box .content-article-detail .content-article-view {
+  white-space: pre;
+}
+.root .main-page .page-content .content-article-box .content-article-detail .content-article-view-name {
+  height: 56px;
+}
+.root .main-page .page-content .content-article-box .content-article-detail .content-article-view-name .content-article-view-title {
+  font-size: 24px;
+  font-weight: 600;
+}
+.root .main-page .page-content .content-article-box .content-article-detail .content-article-view-name input {
+  width: 100%;
+}
+
+footer.ant-layout-footer {
+  color: #fff;
+}
+footer.ant-layout-footer[theme=light] {
+  background: #98DBC6;
+}
+footer.ant-layout-footer[theme=dark] {
+  background: #37554b;
+}
+footer.ant-layout-footer .address-email {
+  display: inline-block;
+}
+footer.ant-layout-footer .address-email a {
+  color: #fff;
+}/*# sourceMappingURL=base.css.map */
