@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "logoFont";
+  src: url(../../public/font/Streetwear.otf);
+}
+.cursor-pointer:hover {
+  cursor: pointer;
+}
+
+.border-none {
+  border: none !important;
+}
+.border-none:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}/*# sourceMappingURL=common.css.map */

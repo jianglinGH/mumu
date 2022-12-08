@@ -1,0 +1,243 @@
+.model-addarticle {
+    position: relative;
+    right: -84px;
+    top: 12px;
+    button{
+        float: right;
+        &:nth-child(2) {
+            margin-right: 12px;
+        }
+    }
+}
+
+.content-sleep-box {
+    position: absolute;
+    left: 40px;
+    right: 40px;
+    bottom: 20px;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    .content-sleep-detail {
+        position: relative;
+        padding: 16px;
+        height: 100%;
+        overflow-y: auto;
+        background: #fff;
+        .content-sleep-record {
+            position: relative;
+            margin-bottom: 12px;
+            width: 80px; 
+            height: 80px;
+            border-radius: 20px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &[status='awake'] {
+                &:hover {
+                    background: rgb(202, 202, 202);
+                } 
+                &:active {
+                    background: rgb(163, 162, 162);
+                } 
+            }
+            .content-sleep-shadow {
+                position: absolute; 
+                bottom: 0;
+                width: 80px; 
+                height: 0px;
+                background: rgba(70, 70, 70, 0.8);
+            }
+            &[status='asleep'] {
+                background: rgb(70, 70, 70);
+            }
+        }
+    }
+}
+
+.content-article-box {
+    position: absolute;
+    left: 40px; 
+    right: 40px;
+    bottom: 20px;
+    top: 20px; 
+    display: flex;
+    flex-direction: column; 
+    overflow: auto;  
+    .content-article {  
+        flex-shrink: 0;
+        padding: 16px;
+        border-bottom: 1px solid rgb(207, 207, 207);
+        height: 200px;
+        background: #fff;
+        &:last-child{
+            border: none;
+        }
+        .content-article-title { 
+            line-height: 40px;
+            font-size: 24px;
+        }
+        .content-article-txt {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            WHITE-SPACE: pre;
+            text-overflow: ellipsis;
+            line-height: 30px;
+            font-size: 14px;
+            height: 92px;
+            color: rgba(0, 0, 0, 0.85);
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .content-article-like {
+            line-height: 40px;
+            height: 40px;
+        } 
+        .content-article-like-icon {
+            display: inline-block;
+            font-size: 20px;
+            color: #e00;
+            cursor: default;
+            &:hover {
+                animation: beat .25s infinite alternate;
+            } 
+            transform-origin: center;
+        }  
+        @keyframes beat {
+            to {transform: scale(1.4);}
+        }
+        .content-article-like-count {
+            position: relative;
+            margin-left: 8px; 
+            top: -2px;
+        }
+        
+    }
+    .content-article-detail {
+        position: relative;
+        padding: 16px;
+        height: 100%;
+        overflow-y: auto;
+        background: #fff;
+        .content-article-view,
+        .content-article-edit {
+            position: relative;
+            height: 100%;
+            .content-article-op-container {
+                position: absolute;
+                right: 0px;
+                bottom: 0px;
+                left: 0px;
+                height: 24px;
+                .img-edit-article,
+                .img-done-article,
+                .img-return-article {
+                    float: right;
+                    width: 24px; 
+                    &:hover {
+                        cursor: pointer;
+                    }
+                } 
+                .img-edit-article,
+                .img-done-article{
+                    margin-left: 12px;
+                }
+                .img-tooltip,
+                .img-deleteArticle{
+                    float: left;
+                    width: 24px;
+                }
+                .img-deleteArticle{
+                    margin-right: 12px;
+                }
+                .article-count-num {
+                    margin-left: 12px;
+                    color: rgb(158, 158, 158);
+                }
+            }
+            .content-article-edit-block,
+            .content-article-view-detail {
+                position: absolute;
+                top: 64px;
+                bottom: 48px;
+                left: 0px;
+                right: 0px;
+                overflow: auto;
+            }
+            .content-article-edit-block{
+                padding: 12px;
+                border-radius: 2px;
+                border: 1px solid #d9d9d9;
+            }
+        }
+        .content-article-view{
+            white-space: pre;
+        }
+        .content-article-view-name{
+            height: 56px; 
+            .content-article-view-title {
+                font-size: 24px;
+                font-weight: 600;
+            }
+            input {
+                width: 100%;
+            }
+        }
+        
+    } 
+}
+
+.todo-box {
+    .todo-title {
+        display: inline-block;
+        width: 80%;
+    }
+    .todo-addicon {
+        width: 20px;
+        // float: right;
+        margin-left: 60px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .todo-row {
+        margin: 0!important;
+        margin-bottom: 8px!important;
+        .todo-task {
+            float: left;
+            width: 80%;
+            .todo-ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                min-height: 1px;
+                .todo-done {
+                    height: 30px;
+                    line-height: 30px;
+                    text-decoration: line-through;
+                    .todo-done-span {
+                        margin-left: 11px;
+                    }
+                }
+            }
+        }
+        .todo-progress {
+            float: left;
+            width: 20%;
+        }
+        .todo-input-ordinary,
+        .todo-input-new{
+            width: 260px;
+        } 
+        .todo-input-ordinary {
+            &[delay='1']{
+                color: red;
+            }
+        }
+    }
+}
