@@ -7,12 +7,12 @@
 web服务器：nginx
 
 目录
-blog
-  public
-  src
-    common      公用的方法
-    components  组件
-    img
-    static
-    style
-  package.json  
+-blog
+  -public
+  -src
+    -common      公用的方法
+    -components  组件
+    -img
+    -static
+    -style
+  -package.json  
